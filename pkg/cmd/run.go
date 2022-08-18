@@ -283,6 +283,7 @@ func run(c *cli.Context, comp *api.Composition) (err error) {
 		return err
 	}
 
+	// TODO: fix this write-artifacts variable name
 	if file := c.String("file"); file != "" && c.Bool("write-artifacts") {
 		f, err := os.OpenFile(file, os.O_WRONLY, 0644)
 		if err != nil {
